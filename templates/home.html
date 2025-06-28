@@ -1,10 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="videoContainer">
-    <video autoplay muted loop>
-        <source src="{{ url_for('static', filename='video/backgroundVideo.mp4') }}" type="video/mp4">
-    </video>
+<div class="backgroundContainer">
+    <img src="{{ url_for('static', filename='images/backgroundHome.png') }}">
 </div>
 <div class="titleSection">
     <div class="title">
