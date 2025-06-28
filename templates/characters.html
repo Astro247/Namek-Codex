@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1 id="name"></h1>
+<div class="slider-container">
+    <div class="arrow left" onclick="prevSlide()">‹</div>
+    <div class="slider" id="slider">
+        <div class="slide left"><img /></div>
+        <div class="slide center"><img /></div>
+        <div class="slide right"><img /></div>
+    </div>
+    <div class="arrow right" onclick="nextSlide()">›</div>
+</div>
+<div class="explanation">
+    <p id="description"></p>
+</div>
+<script src="{{ url_for('static', filename='js/characters.js') }}"></script>
+
+{% endblock content %}

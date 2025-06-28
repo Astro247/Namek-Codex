@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="videoContainer">
+    <video autoplay muted loop>
+        <source src="{{ url_for('static', filename='video/backgroundVideo.mp4') }}" type="video/mp4">
+    </video>
+</div>
+<div class="titleSection">
+    <div class="title">
+        <h1>NAMEK-CODEX</h1>
+    </div>
+    <div class="oneStar">
+        <img src="{{ url_for('static', filename='images/dragonballs/1star.png') }}">
+    </div>
+    <div class="twoStar">
+        <img src="{{ url_for('static', filename='images/dragonballs/2star.png') }}">
+    </div>
+    <div class="threeStar">
+        <img src="{{ url_for('static', filename='images/dragonballs/3star.png') }}">
+    </div>
+    <div class="fourStar">
+        <img src="{{ url_for('static', filename='images/dragonballs/4star.png') }}">
+    </div>
+    <div class="fiveStar">
+        <img src="{{ url_for('static', filename='images/dragonballs/5star.png') }}">
+    </div>
+    <div class="sixStar">
+        <img src="{{ url_for('static', filename='images/dragonballs/6star.png') }}">
+    </div>
+    <div class="sevenStar">
+        <img src="{{ url_for('static', filename='images/dragonballs/7star.png') }}">
+    </div>
+</div>
+
+<div class="explanation">
+    <p>Dragon Ball Z is a popular Japanese anime and manga series created by Akira Toriyama. It serves as the direct
+        sequel to the original Dragon Ball story and continues the adventures of Goku, who has now grown into an
+        adult warrior. The series originally aired in Japan from 1989 to 1996 and later became a massive
+        international success, introducing many viewers worldwide to anime for the first time.</p>
+
+    <p>The story of Dragon Ball Z follows Goku and his allies as they face increasingly powerful enemies who
+        threaten Earth and the entire universe. Iconic story arcs include battles against Vegeta and the Saiyans,
+        the tyrant Frieza, the artificial androids, and the bio-engineered creature Cell, culminating in the fight
+        against the magical creature Majin Buu. Each saga escalates in stakes and power, showcasing intense martial
+        arts combat, dramatic transformations, and themes of friendship and perseverance.</p>
+
+    <p>One of the most famous elements of Dragon Ball Z is the concept of "Ki" a form of life energy used in
+        powerful attacks like the Kamehameha wave. The series also introduced transformations such as the legendary
+        Super Saiyan form, which became a defining image of the franchise and influenced countless other works of
+        fiction.</p>
+
+    <p>Although Akira Toriyama created and wrote the original manga story, the anime adaptation was produced by Toei
+        Animation. Various directors, writers, and artists contributed to its development over time, expanding the
+        narrative and adding filler episodes that are not present in the manga. Despite this, Dragon Ball Z has
+        remained one of the most beloved and influential anime series ever created, leaving a lasting impact on
+        global pop culture.</p>
+</div>
+
+<div class="endHome">
+    <div id="credits">
+        <h3 class="endTitle">Credits</h3>
+        <h3 class="info">NAMEK-CODEX Developer: Manuel Sarti</h3>
+        <h3 class="info">Github Profile: <a href="https://github.com/Astro247">Astro247</a></h3>
+    </div>
+    <div id="contacts">
+        <h3 class="endTitle">Contacts</h3>
+        <h3 class="info">Gmail: manuel.sarti36@gmail.com</h3>
+        <h3 class="info">Linkedin: <a href="https://www.linkedin.com/in/manuel-sarti-9b2489282/">Manuel
+                Sarti</a></h3>
+    </div>
+</div>
+
+{% endblock content %}

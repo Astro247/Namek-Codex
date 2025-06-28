@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    {% if page == 'home' %}
+    <title>NAMEK-CODEX | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    {% endif %}
+    {% if page == 'char' %}
+    <title>NAMEK-CODEX | Characters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/characters.css') }}">
+    {% endif %}
+    {% if page == 'sagas' %}
+    <title>NAMEK-CODEX | Sagas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sagas.css') }}">
+    {% endif %}
+</head>
+
+<body>
+    <div class="outerContainer">
+        <div class="innerContainer">
+            <div class="leftSection">
+                <div class="icon">
+                    <img src="{{ url_for('static', filename='images/favicon.png') }}" alt="Logo">
+                </div>
+                <div class="navbarTitle">
+                    <h2>NAMEK-CODEX</h2>
+                </div>
+            </div>
+            <nav class="navLinks">
+                <a href="/">Home</a>
+                <a href="/sagas">Sagas</a>
+                <a href="/characters">Characters</a>
+            </nav>
+        </div>
+    </div>
+
+    {% block content %}{% endblock content %}
+
+</body>
+
+</html>

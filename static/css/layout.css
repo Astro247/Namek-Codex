@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'db';
+    src: url(../fonts/Debrosee-ALPnL.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+}
+
+.outerContainer {
+    background-color: rgb(196, 104, 0);
+    margin-top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.innerContainer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    transition: rotate 0.2s ease;
+}
+
+.icon:hover {
+    rotate: 65deg;
+}
+
+.icon img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.navbarTitle h2 {
+    font-size: 2rem;
+    color: black;
+    font-family: db;
+    white-space: nowrap;
+    margin: 0;
+}
+
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-family: db;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.navLinks a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 20px rgb(209, 209, 209);
+    white-space: nowrap;
+}
+
+@media (max-width: 633px) {
+    .innerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}

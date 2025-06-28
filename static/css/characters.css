@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'db';
+    src: url("{{ url_for('static', filename='fonts/Debrosee-ALPnL.ttf') }}");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 8rem;
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-family: db;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.slider-container {
+    position: relative;
+    width: min(90vw, 1200px);
+    height: clamp(300px, 50vh, 600px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(2rem, 5vw, 5rem);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.arrow:hover {
+    color: rgb(85, 85, 85);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.slider {
+    position: relative;
+    width: 85%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    position: absolute;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide.center {
+    width: 60%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.slide.left {
+    width: 40%;
+    height: 70%;
+    left: 15%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0.6;
+}
+
+.slide.right {
+    width: 40%;
+    height: 70%;
+    left: 85%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0.6;
+}
+
+.explanation {
+    background-color: rgb(48, 48, 48);
+    width: min(90vw, 1200px);
+    padding: clamp(15px, 3vw, 30px);
+    border: solid 3px black;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.explanation p {
+    color: white;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        margin-top: 8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .slider-container {
+        height: clamp(250px, 40vh, 400px);
+        margin-bottom: 1.5rem;
+    }
+
+    .arrow {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        top: 20rem;
+    }
+
+    .arrow.left {
+        left: 5px;
+    }
+
+    .arrow.right {
+        right: 5px;
+    }
+
+    .slider {
+        width: 90%;
+    }
+
+    .slide.center {
+        width: 70%;
+    }
+
+    .slide.left {
+        width: 35%;
+        left: 10%;
+    }
+
+    .slide.right {
+        width: 35%;
+        left: 90%;
+    }
+}
+
+@media (max-width: 633px) {
+    h1 {
+        margin-top: 15rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .slider-container {
+        height: clamp(200px, 35vh, 300px);
+    }
+
+    .slide.center {
+        width: 80%;
+    }
+
+    .slide.left {
+        width: 30%;
+        left: 5%;
+    }
+
+    .slide.right {
+        width: 30%;
+        left: 95%;
+    }
+
+    .explanation p {
+        text-align: left;
+    }
+
+    .arrow {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        top: 17rem;
+    }
+
+    .arrow.left {
+        left: 1rem;
+    }
+
+    .arrow.right {
+        right: 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .slider-container {
+        width: 1200px;
+        height: 600px;
+    }
+
+    .explanation {
+        width: 1200px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide {
+        transition: none;
+    }
+
+    .arrow {
+        transition: none;
+    }
+}

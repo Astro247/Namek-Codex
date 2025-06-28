@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'db';
+    src: url("{{ url_for('static', filename='fonts/Debrosee-ALPnL.ttf') }}");
+}
+
+.firstTitle {
+    margin-top: 6rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-family: db, sans-serif;
+    /* aggiunto fallback font */
+    color: white;
+}
+
+.image {
+    margin: 0;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
+    /* altezza minima per evitare elementi troppo piccoli */
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media(max-width: 850px) {
+    .description {
+        height: 50%;
+        font-size: 1rem;
+        overflow-y: scroll;
+    }
+}
+
+@media(max-width: 633px) {
+    .firstTitle {
+        margin-top: 15rem;
+    }
+}
