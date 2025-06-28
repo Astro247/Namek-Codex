@@ -1,0 +1,1 @@
+Check out the website for yourself: https://namek-codex-project.fly.dev/
